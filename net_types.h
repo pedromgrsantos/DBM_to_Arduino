@@ -6,11 +6,10 @@ _Bool outputIrrigationValue;
 int outputIrrigationDurationValue;
 int inputSoilHumiValue;
 int inputAirHumiValue;
-int inputMeteoStaRainValue;
 _Bool outputSensorCheckValue;
 _Bool outputSensorCheck;
 int inputOverride;
-
+int rainMap;
 
 #ifndef __TP2_2022_IOPT_TOOLS_DEFS
 #define __TP2_2022_IOPT_TOOLS_DEFS
@@ -19,6 +18,7 @@ int inputOverride;
 #define GREEN_LED 12
 #define BLUE_LED 11
 #define OVERRIDE A0
+#define METEORAIN A2
 
 #define TRACE_CONT_RUN       (-1)
 #define TRACE_PAUSE          0

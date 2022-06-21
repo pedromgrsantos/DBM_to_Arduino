@@ -38,17 +38,16 @@ void TP2_2022_IOPT_TOOLS_GetInputSignals(
 {
   inputs->is_Humidity_Soil = 20;       // Soil Himudity Sensor Value%
   inputs->is_Humidity_Air = 25;        // Air Humidy Sensor Value%
-  inputs->is_Meteo_Station_Rain = 20;  // Rain Forecast % of rainig
+  inputs->is_Meteo_Station_Rain =  rainMap; // Rain Forecast % of rainig
 
    // Global variables receive values from Local variables
   inputSoilHumiValue = inputs->is_Humidity_Soil;
   inputAirHumiValue =  inputs->is_Humidity_Air;
-  inputMeteoStaRainValue = inputs->is_Meteo_Station_Rain;
   inputOverride = inputs->is_Override_Irrigation;
 
   // Transform analog value in boolean
   
-  if (analogRead(OVERRIDE) > 600) {      // Analog input read on override PIN A0  
+  if (analogRead(OVERRIDE) > 750) {      // Analog input read on override PIN A0  
     inputs->is_Override_Irrigation = 1;  // Override Jumper calculation to BOL
   }else {
     inputs->is_Override_Irrigation = 0;  // Override Jumper calculation to BOL
