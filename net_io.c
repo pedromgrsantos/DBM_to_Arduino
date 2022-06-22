@@ -36,9 +36,9 @@ void TP2_2022_IOPT_TOOLS_GetInputSignals(
   TP2_2022_IOPT_TOOLS_InputSignals* inputs,
   TP2_2022_IOPT_TOOLS_InputSignalEvents* events )
 {
-  inputs->is_Humidity_Soil = 20;       // Soil Himudity Sensor Value%
-  inputs->is_Humidity_Air = 25;        // Air Humidy Sensor Value%
-  inputs->is_Meteo_Station_Rain =  rainMap; // Rain Forecast % of rainig
+  inputs->is_Humidity_Soil = 26;       // Soil Himudity Sensor Value%     <25
+  inputs->is_Humidity_Air = 29;        // Air Humidy Sensor Value%        <60
+  inputs->is_Meteo_Station_Rain =  rainMap; // Rain Forecast % of rainig  <40
 
    // Global variables receive values from Local variables
   inputSoilHumiValue = inputs->is_Humidity_Soil;
